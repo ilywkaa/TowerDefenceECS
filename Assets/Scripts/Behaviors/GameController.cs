@@ -11,6 +11,8 @@ namespace TowerDefence
         [SerializeField] TowerSettings _tower;
         [SerializeField] Transform _spawner;
         [SerializeField] EnemySettings[] _enemies;
+        [Space] 
+        [SerializeField] UIController _uiController;
 
         private Contexts _contexts;
         private Systems _systems;
@@ -42,6 +44,10 @@ namespace TowerDefence
                 //TODO: income system realization
                 .Add(new EnemyAttackSystem(_contexts, _pathfindingService)) //you could pass a hit distance for enemy in ctor
                 .Add(new PlayerHealthSystem(_contexts))
+
+                .Add(new UIHealthSystem(_contexts, _uiController))
+                .Add(new UIGoldSystem(_contexts, _uiController))
+                .Add(new UIGameOverSystem(_contexts, _uiController))
                 ;
 
             //Cleaning up

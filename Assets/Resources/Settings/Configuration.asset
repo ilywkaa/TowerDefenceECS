@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Configuration
   m_EditorClassIdentifier: 
   _startAmountOfGold: 1000
-  _startPlayerHealth: 1266
+  _startPlayerHealth: 215
   _enemySpawnDeltaTime: 5
   _intervalOfRandomNumberEnemiesSpawn: 1
   _targetPrefab: {fileID: 2028364809756519468, guid: e5bb938d00ecba146b959cde1f2413ed,
