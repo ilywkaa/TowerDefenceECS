@@ -101,12 +101,3 @@ $RECYCLE.BIN/
 auth.db
 Update
 Logs
-
-PatchBuilds/Release/Versions/
-PatchBuilds/Beta/Versions/
-PatchBuilds/Release/Output/
-PatchBuilds/Beta/Output/
-PatchBuilds/Release/Temp/
-PatchBuilds/Beta/Temp/
-
-!/Assets/StreamingAssets/AuxLangText.db

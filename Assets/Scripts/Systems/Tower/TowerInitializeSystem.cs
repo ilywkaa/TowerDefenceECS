@@ -23,7 +23,12 @@ namespace TowerDefence
                 e.isTower = true;
                 e.AddDamage(_configurationService.Tower.Damage);
                 e.AddFireRate(_configurationService.Tower.FireRate);
-                viewObject.GetComponent<IView>().InitializeView(_contexts, e);
+                
+                var view = viewObject.GetComponent<IView>();
+                view.InitializeView(_contexts, e);
+                e.AddView(view);
+
+                e.AddPosition(viewObject.transform.position);
             }
         }
     }

@@ -8,11 +8,9 @@ namespace TowerDefence
 {
     public class EnemyAgentSystem : ReactiveSystem<GameEntity>
     {
-        private readonly Contexts _contexts;
         private readonly Type _agentType;
         public EnemyAgentSystem(Contexts contexts, Type agentType) : base(contexts.game)
         {
-            _contexts = contexts;
             _agentType = agentType;
         }
 
@@ -30,7 +28,7 @@ namespace TowerDefence
         {
             foreach (var entity in entities)
             {
-                var gameObject = entity.view.Value.Transform.gameObject;
+                var gameObject = entity.view.value.Transform.gameObject;
                 IAgent agent = (IAgent) gameObject.AddComponent(_agentType);
                 entity.AddAgent(agent);
             }

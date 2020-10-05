@@ -28,13 +28,19 @@ namespace TowerDefence
                 if (entity != null && entity.isTower)
                 {
                     var enhanceCost = _enhanceService.GetTowerEnhanceCost(entity.fireRate);
-                    if (_player.hasGold 
-                        && _player.gold.value > enhanceCost
-                        && _enhanceService.CanEnhance(entity))
+                    if (_player.hasGold
+                        && _player.gold.value > enhanceCost)
                     {
-                        entity.ReplaceTowerEnhance(_enhanceService.EnhanceTower(entity.fireRate));
-                        _player.AddPurchase(enhanceCost);
-                        Debug.Log("The enhancement was succeed.");
+                        if (_enhanceService.CanEnhance(entity))
+                        {
+                            entity.ReplaceTowerEnhance(_enhanceService.EnhanceTower(entity.fireRate));
+                            _player.AddPurchase(enhanceCost);
+                            Debug.Log("The enhancement was succeed.");
+                        }
+                        else
+                        {
+                            Debug.Log($"Tower '{entity.view.value.Transform.gameObject.name}' has the highest level.");
+                        }
                     }
                     else
                     {

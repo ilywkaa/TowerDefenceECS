@@ -44,6 +44,7 @@ namespace TowerDefence
                     e.AddGold(enemy.Cost);
                     e.AddHealth(enemy.Health);
                     e.AddDestination(_pathfindingService.Target());
+                    e.AddPosition(Vector3.positiveInfinity);
                 }
             }
 

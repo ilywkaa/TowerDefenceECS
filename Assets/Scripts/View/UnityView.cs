@@ -2,16 +2,21 @@
 
 namespace TowerDefence
 {
+    [RequireComponent(typeof(Collider))]
     public class UnityView : MonoBehaviour, IView
     {
         private GameObject _gameObject;
-        private Transform _transform;
         private GameEntity _entity;
         public void InitializeView(Contexts contexts, GameEntity entity)
         {
             _gameObject = gameObject;
-            _transform = transform;
             _entity = entity;
+        }
+
+
+        void Update()
+        {
+            _entity.ReplacePosition(transform.position);
         }
 
         public void OnDestroyed(GameEntity entity)
@@ -26,7 +31,8 @@ namespace TowerDefence
             get => _gameObject.activeSelf;
             set => _gameObject.SetActive(value);
         }
-        public Transform Transform => _transform;
+        public Collider Collider => gameObject.GetComponent<Collider>();
+        public Transform Transform => transform;
         public GameEntity Entity => _entity;
         #endregion
     }

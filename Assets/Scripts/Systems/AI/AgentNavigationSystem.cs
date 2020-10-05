@@ -20,7 +20,7 @@ namespace TowerDefence
         {
             foreach (var entity in entities)
             {
-                var destination = entity.destination.Target;
+                var destination = entity.destination.target;
                 entity.agent.value.SetDestination(destination);
                 entity.RemoveDestination();
             }

@@ -13,17 +13,20 @@ public static class GameComponentsLookup {
     public const int Destination = 2;
     public const int Enemy = 3;
     public const int FireRate = 4;
-    public const int Gold = 5;
-    public const int Health = 6;
-    public const int Income = 7;
-    public const int Player = 8;
-    public const int Purchase = 9;
-    public const int StartPosition = 10;
-    public const int Tower = 11;
-    public const int TowerEnhance = 12;
-    public const int View = 13;
+    public const int GameOver = 5;
+    public const int Gold = 6;
+    public const int Health = 7;
+    public const int Hit = 8;
+    public const int Income = 9;
+    public const int Player = 10;
+    public const int Position = 11;
+    public const int Purchase = 12;
+    public const int StartPosition = 13;
+    public const int Tower = 14;
+    public const int TowerEnhance = 15;
+    public const int View = 16;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "Agent",
@@ -31,10 +34,13 @@ public static class GameComponentsLookup {
         "Destination",
         "Enemy",
         "FireRate",
+        "GameOver",
         "Gold",
         "Health",
+        "Hit",
         "Income",
         "Player",
+        "Position",
         "Purchase",
         "StartPosition",
         "Tower",
@@ -48,10 +54,13 @@ public static class GameComponentsLookup {
         typeof(TowerDefence.DestinationComponent),
         typeof(TowerDefence.EnemyComponent),
         typeof(TowerDefence.FireRateComponent),
+        typeof(TowerDefence.GameOverComponent),
         typeof(TowerDefence.GoldComponent),
         typeof(TowerDefence.HealthComponent),
+        typeof(TowerDefence.HitComponent),
         typeof(TowerDefence.IncomeComponent),
         typeof(TowerDefence.PlayerComponent),
+        typeof(TowerDefence.Position),
         typeof(TowerDefence.PurchaseComponent),
         typeof(TowerDefence.StartPositionComponent),
         typeof(TowerDefence.TowerComponent),

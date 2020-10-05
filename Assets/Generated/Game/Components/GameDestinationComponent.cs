@@ -14,14 +14,14 @@ public partial class GameEntity {
     public void AddDestination(UnityEngine.Transform newTarget) {
         var index = GameComponentsLookup.Destination;
         var component = (TowerDefence.DestinationComponent)CreateComponent(index, typeof(TowerDefence.DestinationComponent));
-        component.Target = newTarget;
+        component.target = newTarget;
         AddComponent(index, component);
     }
 
     public void ReplaceDestination(UnityEngine.Transform newTarget) {
         var index = GameComponentsLookup.Destination;
         var component = (TowerDefence.DestinationComponent)CreateComponent(index, typeof(TowerDefence.DestinationComponent));
-        component.Target = newTarget;
+        component.target = newTarget;
         ReplaceComponent(index, component);
     }
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7433d2329351fcb4b972e4e0ea62e92b, type: 3}
   m_Name: Configuration
   m_EditorClassIdentifier: 
-  _startAmountOfGold: 10
+  _startAmountOfGold: 1000
   _startPlayerHealth: 1266
   _enemySpawnDeltaTime: 5
   _intervalOfRandomNumberEnemiesSpawn: 1

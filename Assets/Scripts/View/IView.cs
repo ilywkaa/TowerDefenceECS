@@ -9,5 +9,6 @@ namespace TowerDefence
         Transform Transform { get; }
         GameEntity Entity { get; }
         void InitializeView(Contexts contexts, GameEntity entity);
+        Collider Collider { get; }
     }
 }

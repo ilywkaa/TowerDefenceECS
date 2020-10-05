@@ -25,8 +25,8 @@ namespace TowerDefence
             if (!tower.isTower && !tower.hasFireRate)
                 throw new ArgumentException($"GameEntity index = {tower.creationIndex} is not valid argument.");
 
-            var oldFireRate = tower.fireRate;
-            return oldFireRate != EnhanceTower(tower.fireRate);
+            var oldFireRate = tower.fireRate.value;
+            return oldFireRate != EnhanceTower(tower.fireRate).value;
         }
     }
 }

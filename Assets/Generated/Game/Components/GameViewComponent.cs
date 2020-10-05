@@ -14,14 +14,14 @@ public partial class GameEntity {
     public void AddView(TowerDefence.IView newValue) {
         var index = GameComponentsLookup.View;
         var component = (TowerDefence.ViewComponent)CreateComponent(index, typeof(TowerDefence.ViewComponent));
-        component.Value = newValue;
+        component.value = newValue;
         AddComponent(index, component);
     }
 
     public void ReplaceView(TowerDefence.IView newValue) {
         var index = GameComponentsLookup.View;
         var component = (TowerDefence.ViewComponent)CreateComponent(index, typeof(TowerDefence.ViewComponent));
-        component.Value = newValue;
+        component.value = newValue;
         ReplaceComponent(index, component);
     }
 

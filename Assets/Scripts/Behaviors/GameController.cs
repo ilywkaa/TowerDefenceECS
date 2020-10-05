@@ -38,7 +38,10 @@ namespace TowerDefence
                 .Add(new AgentNavigationSystem(_contexts))
                 .Add(new UserInputSystem(_contexts, _inputService, _enhanceService))
                 .Add(new TowerEnhanceSystem(_contexts))
-                //TODO: purchase income system realization
+                .Add(new PlayerPurchaseSystem(_contexts))
+                //TODO: income system realization
+                .Add(new EnemyAttackSystem(_contexts, _pathfindingService)) //you could pass a hit distance for enemy in ctor
+                .Add(new PlayerHealthSystem(_contexts))
                 ;
 
             //Cleaning up
